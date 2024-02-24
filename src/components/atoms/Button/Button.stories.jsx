@@ -1,5 +1,5 @@
 import Button from "./Button";
-import { FaReact } from "react-icons/fa";
+import { SiStorybook } from "react-icons/si";
 
 export default {
   title: "Components/Atoms/Button",
@@ -86,7 +86,44 @@ export const WithIcon = {
   args: {
     variant: "contained",
     color: "primary",
-    children: <FaReact />,
+    children: <SiStorybook />,
     startIcon: "add",
+  },
+};
+
+export const WithIconAndText = {
+  args: {
+    variant: "contained",
+    color: "primary",
+    children: (
+      <>
+        <SiStorybook />
+        Storybook
+      </>
+    ),
+    startIcon: "add",
+  },
+};
+
+export const WithIconAndTextEnd = {
+  args: {
+    variant: "contained",
+    color: "primary",
+    children: (
+      <>
+        Storybook
+        <SiStorybook />
+      </>
+    ),
+    endIcon: "add",
+  },
+};
+
+export const WithAction = {
+  args: {
+    variant: "contained",
+    color: "primary",
+    children: "Action",
+    onClick: () => alert("Button clicked"),
   },
 };
